@@ -1,0 +1,240 @@
+body {
+  background-color: black;
+  color: #eee;
+  padding: 0;
+  margin: 0;
+  font-family: monospace;
+  box-sizing: border-box;
+}
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#app{
+  display: grid;
+  grid-template-columns: 65% 35%;
+  grid-template-rows: 100%;
+  height: 100vh;
+  width: 100%;
+}
+
+#book-panel {
+  overflow-y: scroll;
+  padding: 10px 40px;
+  font-size: 24px;
+  line-height: 1.4;
+  max-height: 100%;
+}
+#book-panel p {
+  text-indent: 50px;
+}
+
+#search-panel {
+  padding: 20px;
+  font-size: 18px;
+  max-height: 100%;
+  text-align: center;
+}
+
+#search-panel #bat {
+  width: 300px;
+  height: 150px;
+  margin: 0 auto;
+}
+
+#search-panel form{
+  padding: 20px;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+#search-panel form input{
+  width: 100%;
+  font-size: 32px;
+  display: block;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#search-panel form input::placeholder {
+  color: lightgrey;
+}
+
+#search-panel form button{
+  width: 50%;
+  margin: 20px auto;
+  display: block;
+  font-size: 24px;
+  border-radius: 15px;
+  color: orangered;
+  border: 2px solid orangered;
+  background: transparent;
+  cursor: pointer;
+  
+}
+#search-panel form button:hover {
+  color: #eee;
+  border-color: orangered;
+  background: orangered;
+}
+
+
+
+.btn {
+  margin: 20px auto;
+  border-radius: 15px;
+  color: orangered;
+  border: 2px solid orangered;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: #eee;
+  background: orangered;
+}
+.word, .word-definition {
+  line-height: 1.5;
+}
+
+
+#book-select{
+  transition: all 1000s ease;
+  width: 80%;
+  border: 2px solid orangered;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+#book-select ul {
+    display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%
+}
+
+#book-select ul li {
+  width: 33.333%;
+  cursor: pointer;
+  text-align: center;
+  padding: 10px 0;
+}
+
+#book-select ul li img {
+  width: 100px;
+  height: 150px;
+
+}
+#book-select ul li h1:hover,
+#book-select ul li h2:hover {
+  opacity: 1;
+}
+
+#book-select ul li h1 {
+  text-transform: uppercase;
+  font-size: 16px;
+  max-width: 80%;
+  margin: 10px auto;
+  opacity: 0.5;
+}
+#book-select ul li h2{
+  font-size: 12px;
+  max-width: 80%;
+  margin: 0 auto;
+  opacity: 0.5;
+}
+
+#book-display {
+  line-height: 1.8;
+  font-size: 20px;
+  padding: 20px 35px;
+}
+
+#book-panel nav{
+  height: 80px;
+  padding: 0 35px;
+  display: flex;
+  align-items: center;
+  
+
+}
+#book-panel nav button {
+  font-size: 16px;
+  margin: 0 20px;
+  padding: 5px 30px;
+  height: 50%;
+  
+}
+
+#search-panel p {
+  margin: 0;
+}
+#search-panel p .def-tab, 
+#search-panel p .more-tab 
+{
+  color: #eee;
+  border: 2px solid orangered;
+  border-radius: 10px 10px 0 0;
+  border-bottom: none;
+  margin: 30px 10px;
+  margin-bottom: 0;
+  padding: 5px 30px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.active {
+  background: orangered;
+  color: white;
+}
+
+#search-panel .def-body , 
+#search-panel .more-body {
+  border-top: 1px solid orangered;
+}
+
+.def-body {
+  line-height: 1.2;
+}
+
+.def-body .word {
+  display: inline-block;
+  margin: 10px 15px ;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.def-body .word-type {
+  color: #bbb;
+
+}
+.def-body .def-list {
+  line-height: 1.6;
+}
+
+.def-body p {
+  margin: 20px;
+  padding: 30px;
+  font-size: 24px;
+}
+
+.synonimy, .antonimy {
+  line-height: 1.5;
+  padding: 20px 0;
+}
+
+.synonimy li,
+.antonimy li {
+  margin: 5px 0;
+}
+
+.more-body h2 {
+  font-size: 22px;
+  margin: 10px;
+}
+.more-body ul {
+padding: 10px 0;
+}
